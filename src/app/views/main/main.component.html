@@ -1,0 +1,34 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <div class="banner-l">
+      <h1 class="title">FábricaDeSoftware</h1>
+    </div>
+    <div class="banner-r">
+     <button mat-flat-button class="login" (click)="openLogin()" >Login</button>
+      <button mat-flat-button class="button" >Cadastre-se</button>
+    </div>
+</div>
+
+<div class="content" role="main">
+    <div class="content-l">
+      <h1>
+        Nossa missão é fabricar os seus sonhos em 30 dias
+      </h1>
+      <h4>
+        <img src="assets/images/coracao.png">
+        Saiba mais se cadastrando e enviando seu projeto
+      </h4>
+      <button mat-flat-button class="button">Cadastre-se aqui! :)</button>
+      <a class="text">
+        Já tem uma conta?
+      </a>
+      <button mat-flat-button class="login-button" (click)="openLogin()" ><h3>Faça seu login aqui</h3></button>
+    </div>
+    <div class="content-r">
+    <img src="assets/images/devices.png">
+
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

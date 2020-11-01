@@ -1,0 +1,33 @@
+<button mat-button class="close" (click)="onNoClick()">
+    <a class="material-icons">
+        close
+    </a>
+</button>
+<center>
+<div mat-dialog-content class="content">
+  <h1>Bem-vindo(a) de volta!</h1>
+  <h2>Se conecte informando seu usuário e senha.</h2>
+  <br/>
+  <mat-form-field class="input" >
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Por favor entre um email valido
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      O email é <strong>obrigatório</strong>
+    </mat-error>
+  </mat-form-field>
+  <br/>
+  <mat-form-field >
+    <mat-label>Senha</mat-label>
+    <input matInput [formControl]="passFormControl" >
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+     A senha é <strong>obrigatória</strong>
+    </mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button class="button">Login</button>
+</div>
+</center>

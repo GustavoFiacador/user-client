@@ -1,0 +1,48 @@
+
+.close{
+    margin-left: 95%;
+    background-color: #F8F8F8;
+}
+.content h1{
+    text-align: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: bold;
+    font-size:  3rem;
+    line-height: 125%;
+    margin-top: 90px;
+    color: #202020;
+}
+.content h2{
+    margin-top: -10px;
+    text-align: center;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2F2F2F;
+}
+.mat-form-field {
+    margin-left: 35%;
+    width: 300px;
+}
+.input{
+    margin-top: 10px;
+}
+.button{
+    font-family: Sora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #202020;
+    background-color: #EED918;
+    border-radius: 100px;
+    width: 300px;
+    height: 59px;
+  }
+  .mat-dialog-actions{
+      text-align: center;
+  }

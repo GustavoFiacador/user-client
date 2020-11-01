@@ -1,3 +1,5 @@
+import { LoginComponent } from './views/dialogs/login/login.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
