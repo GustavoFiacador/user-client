@@ -93,7 +93,7 @@ p {
 .content-l{
   width: 50%;
   background-color:#202020;
-  height: 100%;
+  height: 101%;
 }
 .content-l h1{
   font-family: 'Raleway';
@@ -154,5 +154,5 @@ p {
 .content-r{
   width: 50%;
   background-color:#EDEDED;
-  height: 100%;
+  height: 101%;
 }

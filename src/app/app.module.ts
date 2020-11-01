@@ -12,6 +12,9 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+
+
 import { CadastroFComponent } from './views/dialogs/cadastro/cadastro-f/cadastro-f.component';
 import { CadastroSComponent } from './views/dialogs/cadastro/cadastro-s/cadastro-s.component';
 import { CadastroTComponent } from './views/dialogs/cadastro/cadastro-t/cadastro-t.component';
@@ -24,7 +27,7 @@ import { CadastroTComponent } from './views/dialogs/cadastro/cadastro-t/cadastro
     MainComponent,
     CadastroFComponent,
     CadastroSComponent,
-    CadastroTComponent
+    CadastroTComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { CadastroTComponent } from './views/dialogs/cadastro/cadastro-t/cadastro
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
   ],

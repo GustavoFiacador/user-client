@@ -1,1 +1,44 @@
-<p>cadastro-s works!</p>
+<div class="header">
+    <img src="./assets/images/icon-2-circle.png" class="icon">
+    
+    <h1>Agora dados base para login...</h1>
+    <button mat-button class="close" (click)="onNoClick()">
+        <a class="material-icons">
+            close
+        </a>
+    </button>
+</div>
+
+<div mat-dialog-content class="content">
+    <mat-form-field class="input-top" >
+        <mat-label>Nome de Usuário </mat-label>
+        <input matInput [formControl]="nameFormControl" >
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+         O nome de usuário é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="input" >
+        <mat-label>Senha</mat-label>
+        <input matInput [formControl]="passFormControl" type="password">
+        <mat-error *ngIf="passFormControl.hasError('required')">
+         A senha é <strong>obrigatória</strong>
+        </mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="input" >
+        <mat-label>Confirme a senha</mat-label>
+        <input matInput [formControl]="passCFormControl" type="password">
+        <mat-error *ngIf="passCFormControl.hasError('required')">
+            A confirmação de senha é <strong>obrigatória</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div class="content-button">
+  <div mat-dialog-actions>
+    <button mat-button class="button" (click)="openCadastro()">Próximo</button>
+  </div>
+</div>
+<div class="pagination">
+    <img src="./assets/images/pagination-2.png" >
+</div>

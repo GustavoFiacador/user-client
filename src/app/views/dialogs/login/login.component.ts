@@ -4,10 +4,6 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 
 import { FormControl, Validators } from '@angular/forms';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-login',
@@ -18,8 +14,7 @@ export interface DialogData {
 
 export class LoginComponent {
   constructor(
-    public dialogRef: MatDialogRef<MainComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+    public dialogRef: MatDialogRef<MainComponent>) { }
 
   onNoClick(): void {
     this.dialogRef.close();

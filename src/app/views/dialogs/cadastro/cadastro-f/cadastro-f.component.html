@@ -1,1 +1,68 @@
-<p>cadastro-f works!</p>
+<div class="header">
+    <img src="./assets/images/icon-1-circle.png" class="icon">
+    
+    <h1>Primeiro os dados gerais...</h1>
+    <button mat-button class="close" (click)="onNoClick()">
+        <a class="material-icons">
+            close
+        </a>
+    </button>
+</div>
+
+<div mat-dialog-content class="content">
+    <mat-form-field class="input" >
+        <mat-label>Nome</mat-label>
+        <input matInput [formControl]="nameFormControl" >
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+         O nome é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="input" >
+        <mat-label>Telefone</mat-label>
+        <input matInput [formControl]="tellFormControl">
+        <mat-error *ngIf="tellFormControl.hasError('required')">
+         O Telefone é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="input" >
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Por favor entre um email valido
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          O email é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+      <br/>
+    <mat-radio-group >
+        <mat-radio-button value="CNPJ">Razão Social</mat-radio-button>
+        <mat-radio-button value="CPF">Pessoa Física</mat-radio-button>
+    </mat-radio-group>
+      <br/>
+      <mat-form-field class="input" >
+        <mat-label>CNPJ</mat-label>
+        <input matInput [formControl]="cnpjFormControl" >
+        <mat-error *ngIf="cnpjFormControl.hasError('required')">
+         O CNPJ é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+    <br/>
+      <mat-form-field class="input" >
+        <mat-label>Nome da empresa</mat-label>
+        <input matInput [formControl]="nomeEFormControl" >
+        <mat-error *ngIf="nomeEFormControl.hasError('required')">
+         O nome da empresa é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div class="content-button">
+  <div mat-dialog-actions>
+    <button mat-button class="button" (click)="openCadastro()">Próximo</button>
+  </div>
+</div>
+<div class="pagination">
+    <img src="./assets/images/pagination-1.png" >
+</div>
