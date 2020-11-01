@@ -3,7 +3,6 @@
         close
     </a>
 </button>
-<center>
 <div mat-dialog-content class="content">
   <h1>Bem-vindo(a) de volta!</h1>
   <h2>Se conecte informando seu usuário e senha.</h2>
@@ -21,13 +20,14 @@
   <br/>
   <mat-form-field >
     <mat-label>Senha</mat-label>
-    <input matInput [formControl]="passFormControl" >
-    <mat-error *ngIf="emailFormControl.hasError('required')">
+    <input matInput [formControl]="passFormControl" type="password" >
+    <mat-error *ngIf="passFormControl.hasError('required')">
      A senha é <strong>obrigatória</strong>
     </mat-error>
   </mat-form-field>
 </div>
-<div mat-dialog-actions>
-  <button mat-button class="button">Login</button>
+<div class="content-button">
+  <div mat-dialog-actions>
+    <button mat-button class="button">Login</button>
+  </div>
 </div>
-</center>

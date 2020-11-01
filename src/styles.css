@@ -4,3 +4,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-dialog-container{
     background-color: #F8F8F8;
 }
+.mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #EED918 !important;
+   }
+  
+.mat-form-field-underline {
+    /*change color of underline*/
+    background-color:#EED918 !important;
+  } 
+.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color:#EED918 !important;;
+}

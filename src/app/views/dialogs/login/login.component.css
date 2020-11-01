@@ -1,10 +1,8 @@
-
 .close{
     margin-left: 95%;
     background-color: #F8F8F8;
 }
 .content h1{
-    text-align: center;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
@@ -15,7 +13,6 @@
 }
 .content h2{
     margin-top: -10px;
-    text-align: center;
     font-family: 'Sora';
     font-style: normal;
     font-weight: normal;
@@ -24,7 +21,6 @@
     color: #2F2F2F;
 }
 .mat-form-field {
-    margin-left: 35%;
     width: 300px;
 }
 .input{
@@ -42,7 +38,15 @@
     border-radius: 100px;
     width: 300px;
     height: 59px;
-  }
-  .mat-dialog-actions{
-      text-align: center;
-  }
+}
+.mat-dialog-actions{
+    text-align: center;
+}
+.content{
+    align-items: center;
+    text-align: center;
+}
+.content-button{
+    margin-top: 30px;
+    margin-left: 34%;
+}

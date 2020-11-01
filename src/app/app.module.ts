@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,13 +12,19 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CadastroFComponent } from './views/dialogs/cadastro/cadastro-f/cadastro-f.component';
+import { CadastroSComponent } from './views/dialogs/cadastro/cadastro-s/cadastro-s.component';
+import { CadastroTComponent } from './views/dialogs/cadastro/cadastro-t/cadastro-t.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    CadastroFComponent,
+    CadastroSComponent,
+    CadastroTComponent
   ],
   imports: [
     BrowserModule,
