@@ -1,8 +1,10 @@
+import { UsuarioService } from './../../../../services/usuario.service';
+import { Usuario } from './../../../../models/usuario.model';
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, Validators } from '@angular/forms';
 import { MainComponent } from 'src/app/views/main/main.component';
-import { CadastroSComponent } from '../cadastro-s/cadastro-s.component';
+import { CadastroTComponent } from '../cadastro-t/cadastro-t.component';
 
 
 @Component({
@@ -12,10 +14,22 @@ import { CadastroSComponent } from '../cadastro-s/cadastro-s.component';
 })
 export class CadastroFComponent {
 
-  constructor(public dialogRef: MatDialogRef<MainComponent>, public dialog: MatDialog) { }
+  constructor(public dialogRef: MatDialogRef<MainComponent>, public dialog: MatDialog, public UsuarioService: UsuarioService) { }
   onNoClick(): void {
     this.dialogRef.close();
   }
+  usuario: Usuario = {
+    nome: "",
+    telefone: "",
+    email: "",
+    senha: "",
+    tipo_cliente: "",
+    cpf: "",
+    cnpj: "",
+    nome_empresa: ""
+  }
+
+  //#region  formControl
   nameFormControl = new FormControl('', [
     Validators.required,
   ]);
@@ -32,13 +46,26 @@ export class CadastroFComponent {
   nomeEFormControl = new FormControl('', [
     Validators.required,
   ]);
+  passFormControl = new FormControl('', [
+    Validators.required,
+
+  ]);
+  passCFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  //#endregion
+  cadastraUsuario(): void {
+    this.UsuarioService.cadastroUsuario(this.usuario).subscribe(() => {
+      this.UsuarioService.showMessage('Cadastro Efetuado!')
+      this.openCadastro()
+    })
+  }
   openCadastro(): void {
-    const dialogRef = this.dialog.open(CadastroSComponent, {
+    const dialogRef = this.dialog.open(CadastroTComponent, {
       width: '968px',
       height: '755px'
     });
     dialogRef.afterClosed().subscribe(result => {
-
     });
     this.dialogRef.close();
   }
