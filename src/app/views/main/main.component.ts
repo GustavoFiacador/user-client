@@ -1,9 +1,9 @@
-import { LoginComponent } from './../dialogs/login/login.component';
+import { LoginComponent } from '../components/dialogs/login/login.component';
 
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CadastroFComponent } from '../dialogs/cadastro/cadastro-f/cadastro-f.component';
+import { CadastroFComponent } from '../components/dialogs/cadastro/cadastro-f/cadastro-f.component';
 
 
 @Component({

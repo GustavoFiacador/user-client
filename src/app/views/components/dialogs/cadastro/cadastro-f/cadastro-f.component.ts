@@ -1,5 +1,5 @@
-import { UsuarioService } from './../../../../services/usuario.service';
-import { Usuario } from './../../../../models/usuario.model';
+import { UsuarioService } from './../../../../../services/usuario.service';
+import { Usuario } from './../../../../../models/usuario.model';
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, Validators } from '@angular/forms';

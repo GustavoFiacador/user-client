@@ -1,9 +1,19 @@
-import { LoginComponent } from './views/dialogs/login/login.component';
-
+import { MainComponent } from './views/main/main.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './views/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "",
+    component: MainComponent
+  },
+  {
+    path: "home",
+    component: HomeComponent
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
