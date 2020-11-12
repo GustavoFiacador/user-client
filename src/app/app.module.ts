@@ -20,7 +20,6 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { CadastroFComponent } from './views/components/dialogs/cadastro/cadastro-f/cadastro-f.component';
 import { CadastroTComponent } from './views/components/dialogs/cadastro/cadastro-t/cadastro-t.component';
 import { HomeComponent } from './views/home/home.component';
-import { HeaderComponent } from './views/components/templates/header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { HeaderComponent } from './views/components/templates/header/header.comp
     CadastroFComponent,
     CadastroTComponent,
     HomeComponent,
-    HeaderComponent,
   ],
   imports: [
     BrowserModule,
