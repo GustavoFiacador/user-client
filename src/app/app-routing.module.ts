@@ -2,6 +2,7 @@ import { MainComponent } from './views/main/main.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
+import { ProjectsComponent } from './views/projects/projects.component';
 
 const routes: Routes = [
   {
@@ -9,9 +10,14 @@ const routes: Routes = [
     component: MainComponent
   },
   {
-    path: "home",
+    path: "inicio",
     component: HomeComponent
+  },
+  {
+    path: "projetos",
+    component: ProjectsComponent
   }
+
 
 ];
 

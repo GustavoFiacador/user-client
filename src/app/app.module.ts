@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { CadastroFComponent } from './views/components/dialogs/cadastro/cadastro-f/cadastro-f.component';
 import { CadastroTComponent } from './views/components/dialogs/cadastro/cadastro-t/cadastro-t.component';
 import { HomeComponent } from './views/home/home.component';
-import { HeaderComponent } from './views/components/template/header/header.component';
+import { HeaderComponent } from './views/components/templates/header/header.component';
 
 @NgModule({
   declarations: [
