@@ -19,7 +19,7 @@ p {
   height: 92px;
   display: flex;
   align-items: center;
-  background-color: #EDEDED;
+  background-color: #F8F8F8;
   color: #000000;
   font-weight: 600;
 }
@@ -29,7 +29,7 @@ p {
   font-size: 1.25rem;
   font-weight: 400;
   color: #000000;
-  background-color: #EDEDED;
+  background-color: #F8F8F8;
   text-decoration:none;
   border-radius: 50px;
   height: 62px; 
@@ -46,7 +46,7 @@ p {
   height: 91%;
   display: flex;
   align-items: center;
-  background-color:#202020;
+  background-color: #EDEDED;
   color: #000000;
   font-weight: 600;
 }
@@ -72,7 +72,6 @@ p {
   width: 50%;
   height: 126px;
 }
-
 .content-r img{
   width: 54.563rem;
   height: 54.563rem;
@@ -80,21 +79,29 @@ p {
 }
 .content-l{
   width: 50%;
-  background-color:#202020;
   height: 101%;
 }
 .content-l h1{
   font-family: 'Raleway';
-  font-size: 4rem;
-  font-weight: 700;
-  color:#FFFFFF;
-  line-height:5rem;
-  margin: 14.125rem 3.188rem 3.5rem 15.313rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 125%;
+  margin-top: 73px;
+  margin-left: 245px;
+  color: #2F2F2F;
+}
+.content h1 small{
+  font-size: 32px;
 }
 .content h4{
-  display: flex;
-  font-family: 'Sora';
+  font-family: Sora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
   color: #9DA2A9;
+  margin-left: 245px;
 }
 .content-l h4 img{
   margin-left: 17.188rem;
@@ -141,6 +148,5 @@ p {
 }
 .content-r{
   width: 50%;
-  background-color:#EDEDED;
   height: 101%;
 }

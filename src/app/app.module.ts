@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatCardModule } from '@angular/material/card';
 
 import { CadastroFComponent } from './views/components/dialogs/cadastro/cadastro-f/cadastro-f.component';
 import { CadastroTComponent } from './views/components/dialogs/cadastro/cadastro-t/cadastro-t.component';
@@ -46,6 +47,7 @@ import { ProjectsComponent } from './views/projects/projects.component';
     MatSnackBarModule,
     HttpClientModule,
     MatToolbarModule,
+    MatCardModule
   ],
   exports: [MatButtonModule],
   providers: [
