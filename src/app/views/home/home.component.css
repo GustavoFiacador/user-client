@@ -184,3 +184,77 @@ color: #CBCDCF;
   width: 50%;
   height: 101%;
 }
+
+.content-r .bottonAddPro{
+  margin-top: 103px;
+  margin-left: 90px;
+  color: #000000;
+  background-color: #EED918;
+  border-radius: 100px;
+  width: 347px;
+  height: 81px; 
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.content-r .bottonVerPro{
+  margin-left: 56px;
+  width: 347px;
+  height: 81px;  
+  /* brand-secondary-dark */
+  border: 2px solid #2534BB;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 24px rgba(97, 97, 97, 0.21));
+  border-radius: 100px;
+  font-family: Sora;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 150%;
+
+/* identical to box height, or 33px */
+text-align: center;
+
+/* brand-secondary-dark */
+color: #2534BB;
+}
+.content-r h1{
+  margin-top: 87px;
+  /* heading/desk-h2 */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 125%;
+
+  /* identical to box height, or 40px */
+  text-align: center;
+
+  color: #000000;
+}
+.content-r .card-projeto{
+  align-items: center;
+  text-align: center;
+  /* neutral/100 */
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.07);
+  border-radius: 30px;
+  width: 750px;
+  height: 108px;
+  top: 48px;
+  margin-left: 90px;
+}
+.content-r .card-projeto h4{
+  margin-top: 25px;
+  margin-left: 100px;
+  font-family: Sora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+  /* neutral/600 */
+  color: #2F2F2F;
+}
