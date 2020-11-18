@@ -5,6 +5,7 @@
     <div class="banner-r">
         <button mat-flat-button class="inicio" routerLink="/inicio">Inicio</button>
         <button mat-flat-button routerLink="/projetos">Meus projetos</button>
+        <button mat-flat-button routerLink="/" class="sair">Sair</button>
     </div>
 </mat-toolbar>
 <div class="content" role="main">
@@ -30,7 +31,7 @@
     </div>
     <div class="content-r">
         <button mat-flat-button class="bottonAddPro">+ Adicionar projeto</button>
-        <button mat-stroked-button class="bottonVerPro">Ver meus projetos</button>
+        <button mat-stroked-button class="bottonVerPro" routerLink="/projetos">Ver meus projetos</button>
         <br />
         <h1>Status do Projeto</h1>
         <mat-card class="card-projeto">

@@ -38,6 +38,9 @@ p {
     margin-left: 50%;
     margin-right: 60px;
 }
+.sair{
+  margin-left:60px;
+}
 .content {
   position: absolute;
   top: 92px;

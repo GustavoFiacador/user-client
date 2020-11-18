@@ -1,13 +1,13 @@
 <button mat-button class="close" (click)="onNoClick()">
-    <a class="material-icons">
-        close
-    </a>
+  <a class="material-icons">
+    close
+  </a>
 </button>
 <div mat-dialog-content class="content">
   <h1>Bem-vindo(a) de volta!</h1>
   <h2>Se conecte informando seu usuário e senha.</h2>
-  <br/>
-  <mat-form-field class="input" >
+  <br />
+  <mat-form-field class="input">
     <mat-label>Email</mat-label>
     <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com">
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -17,17 +17,17 @@
       O email é <strong>obrigatório</strong>
     </mat-error>
   </mat-form-field>
-  <br/>
-  <mat-form-field >
+  <br />
+  <mat-form-field>
     <mat-label>Senha</mat-label>
-    <input matInput [formControl]="passFormControl" type="password" >
+    <input matInput [formControl]="passFormControl" type="password">
     <mat-error *ngIf="passFormControl.hasError('required')">
-     A senha é <strong>obrigatória</strong>
+      A senha é <strong>obrigatória</strong>
     </mat-error>
   </mat-form-field>
 </div>
 <div class="content-button">
   <div mat-dialog-actions>
-    <button mat-button class="button">Login</button>
+    <button mat-button class="button" routerLink="/inicio" (click)="onNoClick()">Login</button>
   </div>
 </div>
