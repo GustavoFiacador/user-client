@@ -22,6 +22,7 @@ import { CadastroFComponent } from './views/components/dialogs/cadastro/cadastro
 import { CadastroTComponent } from './views/components/dialogs/cadastro/cadastro-t/cadastro-t.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProjectsComponent } from './views/projects/projects.component';
+import { FooterComponent } from './views/components/template/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProjectsComponent } from './views/projects/projects.component';
     CadastroTComponent,
     HomeComponent,
     ProjectsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -186,6 +186,10 @@ color: #CBCDCF;
 .content-r{
   width: 50%;
   height: 101%;
+  align-items: flex-start;
+}
+content-r h1{
+  margin-left: -50%;
 }
 
 .content-r .bottonAddPro{
