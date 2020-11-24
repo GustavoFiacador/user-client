@@ -19,14 +19,15 @@ export class CadastroFComponent {
     this.dialogRef.close();
   }
   usuario: Usuario = {
-    nome: "",
-    telefone: "",
+    name: "",
     email: "",
-    senha: "",
-    tipo_cliente: "",
+    password: "",
+    password_repeat: "",
+    role: "",
+    personType: "",
     cpf: "",
     cnpj: "",
-    nome_empresa: ""
+    phone: ""
   }
 
   //#region  formControl

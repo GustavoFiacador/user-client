@@ -1,11 +1,12 @@
 export interface Usuario {
-    nome: string,
-    telefone: string,
+    name: string,
     email: string,
-    senha: string,
-    tipo_cliente: string,
+    password: string,
+    password_repeat: string,
+    role: string,
+    personType: string,
     cpf: string,
     cnpj: string,
-    nome_empresa: string
+    phone: string
 }
 

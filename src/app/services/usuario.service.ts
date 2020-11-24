@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  baseUrl = 'http://localhost:3000/usuario';
+  baseUrl = 'https://fabrica-admin-api.herokuapp.com/user';
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
