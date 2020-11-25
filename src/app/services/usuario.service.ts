@@ -28,4 +28,8 @@ export class UsuarioService {
   setToken(token: string) {
     this.tokenService.setToken(token);
   }
+
+  setRefreshToken(refreshToken: string){
+    this.tokenService.setRefreshToken(refreshToken);
+  }
 }
