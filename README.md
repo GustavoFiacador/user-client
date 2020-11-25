@@ -6,4 +6,6 @@ Para rodar o projeto basta usar o NPM, com:
 
 npm install
 
+npm update
+
 npm start
