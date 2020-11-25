@@ -57,7 +57,14 @@ export class CadastroFComponent {
     Validators.required,
   ]);
   //#endregion
+
   cadastraUsuario(): void {
+    if (this.usuario.personType = "COMPANY") {
+      this.usuario.cnpj = this.cpfCnpj;
+    }
+    else {
+      this.usuario.cpf = this.cpfCnpj;
+    }
     this.UsuarioService.cadastroUsuario(this.usuario).subscribe(() => {
       this.UsuarioService.showMessage('Cadastro Efetuado!')
       this.openCadastro()
