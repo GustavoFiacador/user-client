@@ -18,17 +18,20 @@ export class CadastroFComponent {
   onNoClick(): void {
     this.dialogRef.close();
   }
+  cpfCnpj: string = "";
+
   usuario: Usuario = {
-    nome: "",
-    telefone: "",
+    name: "",
     email: "",
-    senha: "",
-    tipo_cliente: "",
+    password: "",
+    password_repeat: "",
+    role: "CLIENT",
+    personType: "",
     cpf: "",
     cnpj: "",
-    nome_empresa: ""
+    phone: "",
+    ra: ""
   }
-
   //#region  formControl
   nameFormControl = new FormControl('', [
     Validators.required,
@@ -54,7 +57,14 @@ export class CadastroFComponent {
     Validators.required,
   ]);
   //#endregion
+
   cadastraUsuario(): void {
+    if (this.usuario.personType = "COMPANY") {
+      this.usuario.cnpj = this.cpfCnpj;
+    }
+    else {
+      this.usuario.cpf = this.cpfCnpj;
+    }
     this.UsuarioService.cadastroUsuario(this.usuario).subscribe(() => {
       this.UsuarioService.showMessage('Cadastro Efetuado!')
       this.openCadastro()

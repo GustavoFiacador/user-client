@@ -1,84 +1,76 @@
 <div class="header">
   <img src="./assets/images/icon-1-circle.png" class="icon">
-  
+
   <h1>Primeiro os dados gerais...</h1>
   <button mat-button class="close" (click)="onNoClick()">
-      <a class="material-icons">
-          close
-      </a>
+    <a class="material-icons">
+      close
+    </a>
   </button>
 </div>
 
 <div mat-dialog-content class="content">
-  <mat-form-field class="input" >
-      <mat-label>Nome</mat-label>
-      <input matInput [formControl]="nameFormControl" [(ngModel)]="usuario.nome" >
-      <mat-error *ngIf="nameFormControl.hasError('required')">
-       O nome é <strong>obrigatório</strong>
-      </mat-error>
-  </mat-form-field>
-  <br/>
-  <mat-form-field class="input" >
-      <mat-label>Telefone</mat-label>
-      <input matInput [formControl]="tellFormControl" [(ngModel)]="usuario.telefone">
-      <mat-error *ngIf="tellFormControl.hasError('required')">
-       O Telefone é <strong>obrigatório</strong>
-      </mat-error>
-  </mat-form-field>
-  <br/>
-  <mat-form-field class="input" >
-      <mat-label>Email</mat-label>
-      <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com" [(ngModel)]="usuario.email">
-      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-        Por favor entre um email valido
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        O email é <strong>obrigatório</strong>
-      </mat-error>
-  </mat-form-field>
-    <br/>
-  <mat-radio-group id="tipo_cliente" name="tipo_cliente" [(ngModel)]="usuario.tipo_cliente">
-      <mat-radio-button value="EMPRESA" >Razão Social</mat-radio-button>
-      <mat-radio-button value="PESSOA" [(ngModel)]="usuario.tipo_cliente">Pessoa Física</mat-radio-button>
-  </mat-radio-group>
-    <br/>
-    <mat-form-field class="input" >
-      <mat-label>CNPJ</mat-label>
-      <input matInput [formControl]="cnpjFormControl" [(ngModel)]="usuario.cnpj">
-      <mat-error *ngIf="cnpjFormControl.hasError('required')">
-       O CNPJ é <strong>obrigatório</strong>
-      </mat-error>
-  </mat-form-field>
-  <br/>
-    <mat-form-field class="input" >
-      <mat-label>Nome da empresa</mat-label>
-      <input matInput [formControl]="nomeEFormControl" [(ngModel)]="usuario.nome_empresa">
-      <mat-error *ngIf="nomeEFormControl.hasError('required')">
-       O nome da empresa é <strong>obrigatório</strong>
-      </mat-error>
-  </mat-form-field>
-  <br/>
-  <mat-form-field class="input" >
-    <mat-label>Senha</mat-label>
-    <input matInput [formControl]="passFormControl" type="password" [(ngModel)]="usuario.senha">
-    <mat-error *ngIf="passFormControl.hasError('required')">
-     A senha é <strong>obrigatória</strong>
+  <mat-form-field class="input">
+    <mat-label>Nome</mat-label>
+    <input matInput [formControl]="nameFormControl" [(ngModel)]="usuario.name">
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      O nome é <strong>obrigatório</strong>
     </mat-error>
-</mat-form-field>
-<br/>
-<mat-form-field class="input" >
-  <mat-label>Confirme a senha</mat-label>
-  <input matInput [formControl]="passCFormControl" type="password">
-  <mat-error *ngIf="passCFormControl.hasError('required')">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="input">
+    <mat-label>Telefone</mat-label>
+    <input matInput [formControl]="tellFormControl" [(ngModel)]="usuario.phone">
+    <mat-error *ngIf="tellFormControl.hasError('required')">
+      O Telefone é <strong>obrigatório</strong>
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="input">
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com" [(ngModel)]="usuario.email">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Por favor entre um email valido
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      O email é <strong>obrigatório</strong>
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <mat-radio-group id="tipo_cliente" name="tipo_cliente" [(ngModel)]="usuario.personType">
+    <mat-radio-button value="COMPANY" [(ngModel)]="usuario.personType">Pessoa Juridica</mat-radio-button>
+    <mat-radio-button value="PERSON" [(ngModel)]="usuario.personType">Pessoa Física</mat-radio-button>
+  </mat-radio-group>
+  <br />
+  <mat-form-field class="input">
+    <mat-label>CNPJ/CPF</mat-label>
+    <input matInput [formControl]="cnpjFormControl" [(ngModel)]="cpfCnpj">
+    <mat-error *ngIf="cnpjFormControl.hasError('required')">
+      CNPJ/CPF é <strong>obrigatório</strong>
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="input">
+    <mat-label>Senha</mat-label>
+    <input matInput [formControl]="passFormControl" type="password" [(ngModel)]="usuario.password">
+    <mat-error *ngIf="passFormControl.hasError('required')">
+      A senha é <strong>obrigatória</strong>
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="input">
+    <mat-label>Confirme a senha</mat-label>
+    <input matInput [formControl]="passCFormControl" type="password" [(ngModel)]="usuario.password_repeat">
+    <mat-error *ngIf="passCFormControl.hasError('required')">
       A confirmação de senha é <strong>obrigatória</strong>
-  </mat-error>
-</mat-form-field>
+    </mat-error>
+  </mat-form-field>
 </div>
 <div class="content-button">
-<div mat-dialog-actions>
-  <button mat-button class="button" (click)="cadastraUsuario()">Próximo</button>
-</div>
+  <div mat-dialog-actions>
+    <button mat-button class="button" (click)="cadastraUsuario()">Próximo</button>
+  </div>
 </div>
 <div class="pagination">
-  <img src="./assets/images/pagination-1.png" >
+  <img src="./assets/images/pagination-1.png">
 </div>

@@ -2,11 +2,22 @@
     width: 47px;
     height: 46px;
     margin-left: 2px;
-    margin-right: 85%;
+    margin-right: 24px;
 }
 .header{
     display: flex;
     margin-bottom: 30px;
+}
+.header h1{
+    margin-top: 8px;
+    margin-right: 400px;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    color: #CBCDCF;
+    
 }
 .header .close .material-icons{
     font-size: 24px;
@@ -14,10 +25,13 @@
 }
 
 .mat-form-field {
-    width: 300px;
+    width: 472px;
 }
 .input{
     margin-top: 10px;
+}
+.mat-form-field textarea{
+    height: 129px;
 }
 .button{
     font-family: Sora;
@@ -25,15 +39,9 @@
     font-weight: bold;
     font-size: 20px;
     line-height: 150%;
-
-    /* or 30px */
     text-align: center;
-
-    /* brand-secondary-dark */
-    color: #2534BB;
-    /* brand-secondary-dark */
-    border: 2px solid #2534BB;
-    box-sizing: border-box;
+    color: #202020;
+    background-color: #EED918;
     border-radius: 100px;
     width: 300px;
     height: 59px;
@@ -42,45 +50,20 @@
     text-align: center;
 }
 .content{
-    height: 430px;
+    height: 300px;
     align-items: center;
     text-align: center;
 }
-.content img{
-    width: 344px;
-    height: 279px;
-    margin-bottom: 10px;
-}
-.content h1{
-    /* heading/desk-h2 */
-    margin-left: 194px;
-    margin-right: 194px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 125%;
-
-    /* or 40px */
-    text-align: center;
-
-    /* neutral/600 */
-    color: #2F2F2F;
-}
 .content-button{
-    margin-top: 20px;
+    
     margin-left: 34%;
 }
- 
 .pagination{
-    margin-top: 80px;
+    margin-top: 230px;
     align-items: center;
     text-align: center;
 }
 .pagination img{
     width: 74px;
     height: 22px;
-}
-.input-top{
-    margin-top: 120px;
 }

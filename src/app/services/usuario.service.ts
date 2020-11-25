@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  baseUrl = 'http://localhost:3000/usuario';
+  baseUrl = 'https://fabrica-admin-api.herokuapp.com/user/';
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient, private tokenService: TokenService) { }
@@ -21,6 +21,7 @@ export class UsuarioService {
       verticalPosition: "top"
     })
   }
+  //Da post no baseUrl
   cadastroUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.baseUrl, usuario)
   }
