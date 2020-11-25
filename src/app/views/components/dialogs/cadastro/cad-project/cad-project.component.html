@@ -1,0 +1,36 @@
+<div class="header">
+    <img src="./assets/images/icon-1-circle.png" class="icon">
+
+    <h1>Conte mais sobre seu projeto</h1>
+    <button mat-button class="close" (click)="onNoClick()">
+        <a class="material-icons">
+            close
+        </a>
+    </button>
+</div>
+
+<div mat-dialog-content class="content">
+    <mat-form-field class="input">
+        <mat-label>Dê um nome ao seu projeto</mat-label>
+        <input matInput [formControl]="nameFormControl" [(ngModel)]="project.name">
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+            O Nome do projeto é <strong>obrigatório</strong>
+        </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field style="white-space: normal;" class="input">
+        <mat-label>Descreva brevemente seu projeto</mat-label>
+        <textarea matInput [formControl]="describeFormControl" [(ngModel)]="project.description"></textarea>
+        <mat-error *ngIf="describeFormControl.hasError('required')">
+            A Descrição é <strong>obrigatória</strong>
+        </mat-error>
+    </mat-form-field>
+</div>
+<div class="content-button">
+    <div mat-dialog-actions>
+        <button mat-button class="button" (click)="cadastrarProject()">Enviar</button>
+    </div>
+</div>
+<div class="pagination">
+    <img src="./assets/images/pagination-1.png">
+</div>

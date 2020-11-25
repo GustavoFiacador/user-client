@@ -21,6 +21,7 @@ export class UsuarioService {
       verticalPosition: "top"
     })
   }
+  //Da post no baseUrl
   cadastroUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.baseUrl, usuario)
   }
