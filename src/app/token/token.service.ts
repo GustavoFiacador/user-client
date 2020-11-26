@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 const KEY = 'authToken';
+const REFRESH_TOKEN = 'refreshToken';
 
 @Injectable({ providedIn: 'root'})
 export class TokenService {
@@ -19,5 +20,17 @@ export class TokenService {
 
     removeToken() {
         window.localStorage.removeItem(KEY);
+    }
+
+    setRefreshToken(refreshToken){
+        window.localStorage.setItem(REFRESH_TOKEN, refreshToken);
+    }
+
+    getRefreshToken(){
+        return window.localStorage.getItem(REFRESH_TOKEN)
+    }
+
+    removeRefreshToken() {
+        window.localStorage.removeItem(REFRESH_TOKEN);
     }
 }

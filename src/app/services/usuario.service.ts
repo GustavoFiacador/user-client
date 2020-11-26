@@ -5,12 +5,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { TokenService } from '../token/token.service';
 import { Observable } from 'rxjs';
 
+const CLIENT_ID = 'client_id';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
   baseUrl = 'https://fabrica-admin-api.herokuapp.com/user/';
-
+ 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient, private tokenService: TokenService) { }
 
@@ -28,5 +30,22 @@ export class UsuarioService {
 
   setToken(token: string) {
     this.tokenService.setToken(token);
+  }
+
+  setRefreshToken(refreshToken: string){
+    this.tokenService.setRefreshToken(refreshToken);
+  }
+
+  removeToken(){
+    this.tokenService.removeToken;
+    this.tokenService.removeRefreshToken;
+  }
+
+  setClientId(clientId:string){
+    window.localStorage.setItem(CLIENT_ID, clientId);
+  }
+
+  getClientId(){
+    return window.localStorage.getItem(CLIENT_ID);
   }
 }
