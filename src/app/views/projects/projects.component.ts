@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CadProjectComponent } from '../components/dialogs/cadastro/cad-project/cad-project.component';
+import { Router } from '@angular/router';
+import { TokenService } from 'src/app/token/token.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,9 +10,19 @@ import { CadProjectComponent } from '../components/dialogs/cadastro/cad-project/
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router) { }
 
   ngOnInit(): void {
+    if (!(this.tokenService.hasToken())) {
+      this.router.navigateByUrl('/');
+      this.tokenService.removeToken();
+      this.tokenService.removeRefreshToken();
+    }
+  }
+  sairClick(): void {
+    this.router.navigateByUrl('/');
+    this.tokenService.removeToken();
+    this.tokenService.removeRefreshToken();
   }
 
 }

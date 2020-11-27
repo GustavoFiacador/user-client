@@ -9,7 +9,7 @@
   <br />
   <mat-form-field class="input">
     <mat-label>Email</mat-label>
-    <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com">
+    <input matInput [formControl]="emailFormControl" placeholder="Ex. example@gmail.com" [(ngModel)]="email">
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
       Por favor entre um email valido
     </mat-error>
@@ -20,7 +20,7 @@
   <br />
   <mat-form-field>
     <mat-label>Senha</mat-label>
-    <input matInput [formControl]="passFormControl" type="password">
+    <input matInput [formControl]="passFormControl" type="password" [(ngModel)]="senha">
     <mat-error *ngIf="passFormControl.hasError('required')">
       A senha é <strong>obrigatória</strong>
     </mat-error>
@@ -28,6 +28,6 @@
 </div>
 <div class="content-button">
   <div mat-dialog-actions>
-    <button mat-button class="button" routerLink="/inicio" (click)="onNoClick()">Login</button>
+    <button mat-button class="button" (click)="loginClick()">Login</button>
   </div>
 </div>
