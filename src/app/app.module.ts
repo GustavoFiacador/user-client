@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { FooterComponent } from './views/components/template/footer/footer.component';
 import { CadProjectComponent } from './views/components/dialogs/cadastro/cad-project/cad-project.component';
+import { RequestInterceptor } from './auth/request.interceptor';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,11 @@ import { CadProjectComponent } from './views/components/dialogs/cadastro/cad-pro
     {
       provide: MatDialogRef,
       useValue: {}
-    },
+    }, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

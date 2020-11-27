@@ -1,9 +1,9 @@
-import { LoginComponent } from '../components/dialogs/login/login.component';
-
 import { Router } from '@angular/router';
+import { LoginComponent } from '../components/dialogs/login/login.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CadastroFComponent } from '../components/dialogs/cadastro/cadastro-f/cadastro-f.component';
+import { TokenService } from 'src/app/token/token.service';
 
 
 @Component({
@@ -12,10 +12,10 @@ import { CadastroFComponent } from '../components/dialogs/cadastro/cadastro-f/ca
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  constructor(public dialog: MatDialog) { }
   ngOnInit(): void {
   }
-  constructor(public dialog: MatDialog) { }
+
 
   openLogin(): void {
     const dialogRef = this.dialog.open(LoginComponent, {
