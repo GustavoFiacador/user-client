@@ -1,3 +1,4 @@
+import { UsuarioService } from './../../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -10,7 +11,7 @@ import { TokenService } from 'src/app/token/token.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router) { }
+  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router, private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
     if (!(this.tokenService.hasToken())) {
@@ -20,7 +21,8 @@ export class ProjectsComponent implements OnInit {
     }
   }
   sairClick(): void {
-    this.router.navigateByUrl('/');
+    // this.usuarioService.logoutUsuario(this.tokenService.getRefreshToken());
+    //Temporario até validarmos o token direito
     this.tokenService.removeToken();
     this.tokenService.removeRefreshToken();
   }

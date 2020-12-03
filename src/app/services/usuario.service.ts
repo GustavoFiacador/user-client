@@ -6,13 +6,14 @@ import { TokenService } from '../token/token.service';
 import { Observable } from 'rxjs';
 
 const CLIENT_ID = 'client_id';
+const CLIENT_NAME = 'client_name';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
-  baseUrl = 'https://fabrica-admin-api.herokuapp.com/user/';
- 
+  baseUrl = 'https://fabrica-admin-api.herokuapp.com';
+
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient, private tokenService: TokenService) { }
 
@@ -25,27 +26,35 @@ export class UsuarioService {
   }
   //Da post no baseUrl
   cadastroUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(this.baseUrl, usuario)
+    return this.http.post<Usuario>(this.baseUrl + '/user/', usuario)
   }
-
+  //Logout
+  logoutUsuario(refreshToken: String): Observable<String> {
+    return this.http.post<String>(this.baseUrl + '/logout', refreshToken)
+  }
   setToken(token: string) {
     this.tokenService.setToken(token);
   }
 
-  setRefreshToken(refreshToken: string){
+  setRefreshToken(refreshToken: string) {
     this.tokenService.setRefreshToken(refreshToken);
   }
 
-  removeToken(){
+  removeToken() {
     this.tokenService.removeToken;
     this.tokenService.removeRefreshToken;
   }
 
-  setClientId(clientId:string){
+  setClientId(clientId: string) {
     window.localStorage.setItem(CLIENT_ID, clientId);
   }
-
-  getClientId(){
+  getClientId() {
     return window.localStorage.getItem(CLIENT_ID);
+  }
+  setClientName(clientName: string) {
+    window.localStorage.setItem(CLIENT_NAME, clientName);
+  }
+  getClientName() {
+    return window.localStorage.getItem(CLIENT_NAME);
   }
 }
