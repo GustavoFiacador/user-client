@@ -12,17 +12,21 @@ import { CadProjectComponent } from '../components/dialogs/cadastro/cad-project/
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  firstName = "";
-  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router, private usuarioService: UsuarioService) { }
+  aFirstName = this.usuarioService.getClientName().split(' ', 1)
+  firstName = this.aFirstName[0];
 
-  ngOnInit(): void {
+  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router, private usuarioService: UsuarioService) {
     if (!(this.tokenService.hasToken())) {
       this.router.navigateByUrl('/');
-      this.tokenService.removeToken();
-      this.tokenService.removeRefreshToken();
-      var aFirstName = this.usuarioService.getClientName().split(' ', 1)
-      this.firstName = aFirstName[1];
+
+      /*
+      
+      */
     }
+  }
+
+  ngOnInit(): void {
+
 
   }
 

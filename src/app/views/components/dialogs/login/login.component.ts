@@ -37,11 +37,8 @@ export class LoginComponent {
   ]);
   loginClick(): void {
     this.authService.authenticate(this.email, this.senha)
-    if (this.tokenService.hasToken()) {
-      this.router.navigateByUrl('/inicio');
-      this.dialogRef.close();
-    }
-
+    this.router.navigateByUrl('/inicio');
+    this.dialogRef.close();
   }
 }
 
