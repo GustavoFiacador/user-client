@@ -4,9 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TokenService } from '../token/token.service';
 import { Observable } from 'rxjs';
+import { first } from 'rxjs/operators';
 
 const CLIENT_ID = 'client_id';
 const CLIENT_NAME = 'client_name';
+var aFirstName = [];
 
 @Injectable({
   providedIn: 'root'
@@ -56,5 +58,9 @@ export class UsuarioService {
   }
   getClientName() {
     return window.localStorage.getItem(CLIENT_NAME);
+  }
+  getClientFirstName() {
+    aFirstName = window.localStorage.getItem(CLIENT_NAME).split(' ', 1)
+    return aFirstName[0];
   }
 }

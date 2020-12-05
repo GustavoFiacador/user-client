@@ -1,5 +1,4 @@
 import { UsuarioService } from './../../services/usuario.service';
-import { delay } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -12,24 +11,23 @@ import { CadProjectComponent } from '../components/dialogs/cadastro/cad-project/
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  aFirstName = this.usuarioService.getClientName().split(' ', 1)
-  firstName = this.aFirstName[0];
 
+  firstName = "";
   constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router, private usuarioService: UsuarioService) {
+
     if (!(this.tokenService.hasToken())) {
       this.router.navigateByUrl('/');
-
-      /*
-      
-      */
     }
+    this.setFirstName();
   }
 
   ngOnInit(): void {
 
 
   }
-
+  setFirstName(): void {
+    this.firstName = this.usuarioService.getClientFirstName();
+  }
   sairClick(): void {
     //this.usuarioService.logoutUsuario(this.tokenService.getRefreshToken());
     //Temporario até validarmos o token direito
