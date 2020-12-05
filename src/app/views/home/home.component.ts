@@ -1,4 +1,4 @@
-import { delay } from 'rxjs/operators';
+import { UsuarioService } from './../../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -11,20 +11,26 @@ import { CadProjectComponent } from '../components/dialogs/cadastro/cad-project/
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  firstName = "Gustavo";
-  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router) { }
 
-  ngOnInit(): void {
+  firstName = "";
+  constructor(public dialog: MatDialog, private tokenService: TokenService, private router: Router, private usuarioService: UsuarioService) {
+
     if (!(this.tokenService.hasToken())) {
       this.router.navigateByUrl('/');
-      this.tokenService.removeToken();
-      this.tokenService.removeRefreshToken();
-
     }
+    this.setFirstName();
+  }
+
+  ngOnInit(): void {
+
 
   }
+  setFirstName(): void {
+    this.firstName = this.usuarioService.getClientFirstName();
+  }
   sairClick(): void {
-    this.router.navigateByUrl('/');
+    //this.usuarioService.logoutUsuario(this.tokenService.getRefreshToken());
+    //Temporario até validarmos o token direito
     this.tokenService.removeToken();
     this.tokenService.removeRefreshToken();
   }

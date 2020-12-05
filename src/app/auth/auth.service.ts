@@ -25,8 +25,8 @@ export class AuthService {
       .subscribe(res => {
         const authToken = res.body["token"];
         const refreshToken = res.body["refreshToken"];
-        const clientId = res.body["user"]["_id"];
-        this.userService.setClientId(clientId);
+        const clientName = res.body["user"]["name"];
+        this.userService.setClientName(clientName);
         this.userService.setRefreshToken(refreshToken);
         this.userService.setToken(authToken);
       });
